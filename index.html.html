@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>365일 운동관리</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="365운동">
+<meta name="theme-color" content="#1E4D3B">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{
+  --pine:#1E4D3B; --pine-deep:#123527; --moss:#7FA98E; --moss-lt:#DCE9E0;
+  --paper:#F7F8F5; --card:#FFFFFF; --ink:#22292B; --ink-soft:#5C6A66;
+  --amber:#E8A33D; --amber-lt:#FBF0DC; --red:#C4553B; --red-lt:#F9E8E3;
+  --line:#E3E8E3; --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;
+  background:var(--paper);color:var(--ink);
+  padding-bottom:84px;line-height:1.5;
+  font-variant-numeric:tabular-nums;
+}
+header{
+  background:var(--pine);color:#fff;padding:18px 18px 14px;
+  position:sticky;top:0;z-index:20;
+}
+.h-top{display:flex;justify-content:space-between;align-items:baseline}
+.h-title{font-size:1.05rem;font-weight:700;letter-spacing:-0.01em}
+.h-day{font-size:0.85rem;opacity:.85}
+/* 365-tick strip: signature element */
+.strip{display:flex;gap:1px;margin-top:12px;height:14px;border-radius:4px;overflow:hidden}
+.strip span{flex:1;background:rgba(255,255,255,.18)}
+.strip span.done{background:var(--amber)}
+.strip span.today{background:#fff}
+.strip-cap{display:flex;justify-content:space-between;font-size:0.7rem;opacity:.75;margin-top:4px}
+
+main{padding:16px 16px 8px;max-width:560px;margin:0 auto}
+.view{display:none}
+.view.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:14px}
+.card h2{font-size:0.8rem;font-weight:700;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:10px}
+
+.date-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.date-nav button{
+  border:1px solid var(--line);background:var(--card);border-radius:10px;
+  width:42px;height:42px;font-size:1.2rem;color:var(--pine);cursor:pointer
+}
+.date-nav button:disabled{opacity:.3}
+.dn-mid{text-align:center}
+.dn-date{font-weight:700;font-size:1.05rem}
+.dn-sub{font-size:0.8rem;color:var(--ink-soft)}
+.today-btn{display:block;margin:0 auto 12px;background:none;border:none;color:var(--pine);font-size:0.82rem;text-decoration:underline;cursor:pointer}
+
+.stage-chip{display:inline-block;background:var(--moss-lt);color:var(--pine-deep);font-size:0.78rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+
+.banner{border-radius:12px;padding:12px 14px;font-size:0.88rem;margin-bottom:14px;font-weight:600}
+.banner.amber{background:var(--amber-lt);color:#7A5313}
+.banner.red{background:var(--red-lt);color:#8A3322}
+.banner.green{background:var(--moss-lt);color:var(--pine-deep)}
+
+.plan-list{list-style:none}
+.plan-list li{
+  display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)
+}
+.plan-list li:last-child{border-bottom:none}
+.chk{
+  width:28px;height:28px;min-width:28px;border:2px solid var(--moss);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;cursor:pointer;
+  transition:background .15s
+}
+.chk.on{background:var(--pine);border-color:var(--pine)}
+.pl-ico{font-size:1.4rem;min-width:1.6em;text-align:center}
+.pl-name{font-size:0.8rem;color:var(--ink-soft)}
+.pl-val{font-weight:700;font-size:0.98rem}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:0.78rem;color:var(--ink-soft);margin-bottom:5px;font-weight:600}
+.field input[type=number],.field input[type=text],.field textarea{
+  width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:1rem;
+  background:var(--paper);font-family:inherit
+}
+.field input:focus,.field textarea:focus{outline:2px solid var(--moss);border-color:var(--moss)}
+textarea{resize:vertical;min-height:64px}
+.pain-row{display:flex;align-items:center;gap:12px}
+.pain-row input[type=range]{flex:1;accent-color:var(--pine)}
+.pain-val{font-weight:700;width:2ch;text-align:center;font-size:1.1rem}
+
+.save-btn{
+  width:100%;background:var(--pine);color:#fff;border:none;border-radius:12px;
+  padding:15px;font-size:1.02rem;font-weight:700;cursor:pointer;font-family:inherit
+}
+.save-btn:active{background:var(--pine-deep)}
+.saved-msg{text-align:center;color:var(--pine);font-size:0.85rem;margin-top:8px;font-weight:600;min-height:1.3em}
+
+.stat-row{display:flex;gap:10px;margin-bottom:14px}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 10px;text-align:center}
+.stat .num{font-size:1.5rem;font-weight:800;color:var(--pine)}
+.stat .lbl{font-size:0.72rem;color:var(--ink-soft);margin-top:2px}
+
+svg.chart{width:100%;height:auto;display:block}
+
+.rec-item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 4px;border-bottom:1px solid var(--line);cursor:pointer
+}
+.rec-item:last-child{border-bottom:none}
+.rec-l .d{font-weight:700}
+.rec-l .s{font-size:0.78rem;color:var(--ink-soft)}
+.rec-r{text-align:right}
+.rec-r .w{font-weight:700}
+.rec-r .m{font-size:0.78rem;color:var(--ink-soft)}
+.rec-done{color:var(--pine);font-weight:700;margin-left:6px}
+
+table.stage-t{width:100%;border-collapse:collapse;font-size:0.82rem}
+table.stage-t th,table.stage-t td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.stage-t th{color:var(--ink-soft);font-size:0.74rem;font-weight:700}
+table.stage-t tr.cur{background:var(--moss-lt)}
+
+nav{
+  position:fixed;bottom:0;left:0;right:0;background:var(--card);
+  border-top:1px solid var(--line);display:flex;z-index:30;
+  padding-bottom:env(safe-area-inset-bottom)
+}
+nav button{
+  flex:1;background:none;border:none;padding:10px 0 12px;cursor:pointer;
+  font-size:0.72rem;color:var(--ink-soft);font-family:inherit;font-weight:600
+}
+nav button .ico{display:block;font-size:1.25rem;margin-bottom:2px}
+nav button.on{color:var(--pine)}
+.small{font-size:0.78rem;color:var(--ink-soft)}
+.mt8{margin-top:8px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-top">
+    <div class="h-title">365일 운동관리</div>
+    <div class="h-day" id="hDay"></div>
+  </div>
+  <div class="strip" id="strip"></div>
+  <div class="strip-cap"><span>1일차 · 95kg</span><span>365일차 · 목표 70kg</span></div>
+</header>
+
+<main>
+<!-- ============ 오늘 ============ -->
+<div class="view active" id="view-today">
+  <div class="date-nav">
+    <button id="prevDay" aria-label="이전 날">‹</button>
+    <div class="dn-mid">
+      <div class="dn-date" id="dnDate"></div>
+      <div class="dn-sub" id="dnSub"></div>
+    </div>
+    <button id="nextDay" aria-label="다음 날">›</button>
+  </div>
+  <button class="today-btn" id="goToday">오늘로 이동</button>
+
+  <div id="banners"></div>
+
+  <div class="card">
+    <span class="stage-chip" id="stageChip"></span>
+    <h2>오늘의 계획</h2>
+    <ul class="plan-list" id="planList"></ul>
+  </div>
+
+  <div class="card">
+    <h2>오늘 기록</h2>
+    <div class="grid2">
+      <div class="field"><label>실제 체중 (kg)</label><input type="number" step="0.1" inputmode="decimal" id="inW" placeholder="예: 94.5"></div>
+      <div class="field"><label>실제 운동 (분)</label><input type="number" inputmode="numeric" id="inMin" placeholder="분"></div>
+      <div class="field"><label>걸음 수</label><input type="number" inputmode="numeric" id="inSteps" placeholder="걸음"></div>
+      <div class="field"><label>수면 (시간)</label><input type="number" step="0.5" inputmode="decimal" id="inSleep" placeholder="시간"></div>
+      <div class="field"><label>물 (L)</label><input type="number" step="0.1" inputmode="decimal" id="inWater" placeholder="L"></div>
+      <div class="field"><label>혈압</label><input type="text" id="inBP" placeholder="예: 120/80"></div>
+    </div>
+    <div class="field">
+      <label>통증·피로 (0~10)</label>
+      <div class="pain-row">
+        <input type="range" min="0" max="10" value="0" id="inPain">
+        <span class="pain-val" id="painVal">0</span>
+      </div>
+    </div>
+    <div class="field"><label>🍚 식단 — 아침</label><input type="text" id="inDietB" placeholder="아침 식사 메모"></div>
+    <div class="field"><label>🍱 식단 — 점심</label><input type="text" id="inDietL" placeholder="점심 식사 메모"></div>
+    <div class="field"><label>🍲 식단 — 저녁</label><input type="text" id="inDietD" placeholder="저녁 식사 메모"></div>
+    <div class="field"><label>💊 약 복용</label><input type="text" id="inMed" placeholder="복용한 약, 시간 등"></div>
+    <div class="field"><label>메모</label><textarea id="inMemo" placeholder="컨디션, 조정 사항 등"></textarea></div>
+    <button class="save-btn" id="saveBtn">저장</button>
+    <div class="saved-msg" id="savedMsg"></div>
+  </div>
+</div>
+
+<!-- ============ 기록 ============ -->
+<div class="view" id="view-records">
+  <div class="stat-row">
+    <div class="stat"><div class="num" id="stDone">0</div><div class="lbl">완료한 날</div></div>
+    <div class="stat"><div class="num" id="stStreak">0</div><div class="lbl">연속 기록</div></div>
+    <div class="stat"><div class="num" id="stRate">0%</div><div class="lbl">달성률</div></div>
+  </div>
+  <div class="card">
+    <h2>기록한 날 (탭하면 수정)</h2>
+    <div id="recList"><p class="small">아직 기록이 없습니다. 오늘 화면에서 첫 기록을 저장해 보세요.</p></div>
+  </div>
+</div>
+
+<!-- ============ 진행 ============ -->
+<div class="view" id="view-progress">
+  <div class="card">
+    <h2>체중 추이 — 계획(회색) vs 실제(초록)</h2>
+    <div id="chartWrap"></div>
+    <p class="small mt8" id="chartNote"></p>
+  </div>
+  <div class="card">
+    <h2>이번 주 운동 시간</h2>
+    <div id="weekWrap"></div>
+  </div>
+</div>
+
+<!-- ============ 단계 ============ -->
+<div class="view" id="view-stages">
+  <div class="card">
+    <h2>5단계 프로그램</h2>
+    <table class="stage-t" id="stageTable">
+      <tr><th>단계</th><th>체중 구간</th><th>주간 유산소</th><th>근력</th></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2>근력 A — 하체·밀기 (현재 단계 기준)</h2>
+    <div id="strA"></div>
+  </div>
+  <div class="card">
+    <h2>근력 B — 등·후면·코어 (현재 단계 기준)</h2>
+    <div id="strB"></div>
+  </div>
+  <div class="card">
+    <h2>자동 조정 원칙</h2>
+    <table class="stage-t">
+      <tr><th>상황</th><th>조정</th></tr>
+      <tr><td>68~71kg 도달</td><td>유지형 전환 — 체중보다 허리·체력 우선</td></tr>
+      <tr><td>68kg 미만</td><td>고강도 축소, 섭취 소폭 증가, 추가 감량 방지</td></tr>
+      <tr><td>2주 정체</td><td>인터벌 주 1회 추가 또는 저항 5~10% 증가 (한 번에 한 요소만)</td></tr>
+      <tr><td>통증·피로 7↑</td><td>유산소 30~50% 감소, 해당 부위 휴식, 48시간 회복. 지속 시 진료</td></tr>
+    </table>
+  </div>
+</div>
+</main>
+
+<nav>
+  <button data-v="today" class="on"><span class="ico">✓</span>오늘</button>
+  <button data-v="records"><span class="ico">☰</span>기록</button>
+  <button data-v="progress"><span class="ico">↗</span>진행</button>
+  <button data-v="stages"><span class="ico">Ⅴ</span>단계</button>
+</nav>
+
+<script>
+// [일차, 날짜, 요일, 단계, 계획체중, 걸음목표, 유산소, RPE, 근력, 세트반복, 스트레칭, 목표분]
+const PLAN = [[1, "2026-07-27", "월", "1단계", 94.9, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [2, "2026-07-28", "화", "1단계", 94.8, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [3, "2026-07-29", "수", "1단계", 94.7, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [4, "2026-07-30", "목", "1단계", 94.6, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [5, "2026-07-31", "금", "1단계", 94.5, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [6, "2026-08-01", "토", "1단계", 94.4, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [7, "2026-08-02", "일", "1단계", 94.2, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [8, "2026-08-03", "월", "1단계", 94.1, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [9, "2026-08-04", "화", "1단계", 94.0, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [10, "2026-08-05", "수", "1단계", 93.9, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [11, "2026-08-06", "목", "1단계", 93.8, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [12, "2026-08-07", "금", "1단계", 93.7, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [13, "2026-08-08", "토", "1단계", 93.6, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [14, "2026-08-09", "일", "1단계", 93.5, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [15, "2026-08-10", "월", "1단계", 93.4, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [16, "2026-08-11", "화", "1단계", 93.3, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [17, "2026-08-12", "수", "1단계", 93.2, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [18, "2026-08-13", "목", "1단계", 93.1, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [19, "2026-08-14", "금", "1단계", 93.0, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [20, "2026-08-15", "토", "1단계", 92.9, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [21, "2026-08-16", "일", "1단계", 92.8, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [22, "2026-08-17", "월", "1단계", 92.6, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [23, "2026-08-18", "화", "1단계", 92.5, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [24, "2026-08-19", "수", "1단계", 92.4, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [25, "2026-08-20", "목", "1단계", 92.3, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [26, "2026-08-21", "금", "1단계", 92.2, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [27, "2026-08-22", "토", "1단계", 92.1, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [28, "2026-08-23", "일", "1단계", 92.0, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [29, "2026-08-24", "월", "1단계", 91.9, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [30, "2026-08-25", "화", "1단계", 91.8, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [31, "2026-08-26", "수", "1단계", 91.7, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [32, "2026-08-27", "목", "1단계", 91.6, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [33, "2026-08-28", "금", "1단계", 91.5, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [34, "2026-08-29", "토", "1단계", 91.4, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [35, "2026-08-30", "일", "1단계", 91.2, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [36, "2026-08-31", "월", "1단계", 91.1, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [37, "2026-09-01", "화", "1단계", 91.0, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [38, "2026-09-02", "수", "1단계", 90.9, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [39, "2026-09-03", "목", "1단계", 90.8, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [40, "2026-09-04", "금", "1단계", 90.7, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [41, "2026-09-05", "토", "1단계", 90.6, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [42, "2026-09-06", "일", "1단계", 90.5, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [43, "2026-09-07", "월", "1단계", 90.4, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [44, "2026-09-08", "화", "1단계", 90.3, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [45, "2026-09-09", "수", "1단계", 90.2, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [46, "2026-09-10", "목", "1단계", 90.1, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [47, "2026-09-11", "금", "1단계", 90.0, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [48, "2026-09-12", "토", "1단계", 89.9, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [49, "2026-09-13", "일", "1단계", 89.8, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [50, "2026-09-14", "월", "1단계", 89.6, 7000, "빠른 걷기 35분", "4~5", "근력 A", "1~2세트×10~12회", "10분", 55], [51, "2026-09-15", "화", "1단계", 89.5, 6500, "편안한 걷기 30분", "3~4", "균형·발목", "2세트", "10분", 45], [52, "2026-09-16", "수", "1단계", 89.4, 7500, "빠른 걷기 40분", "4~5", "근력 B", "1~2세트×10회", "10분", 60], [53, "2026-09-17", "목", "1단계", 89.3, 6000, "회복 걷기 25분", "3", "가벼운 코어", "1세트", "15분", 40], [54, "2026-09-18", "금", "1단계", 89.2, 8000, "빠른 걷기 40분", "5", "근력 A", "2세트", "10분", 65], [55, "2026-09-19", "토", "1단계", 89.1, 8500, "긴 산책 60분", "4~5", "회복 스트레칭", "-", "15분", 75], [56, "2026-09-20", "일", "1단계", 89.0, 5000, "가벼운 산책 20분", "2~3", "휴식", "-", "15분", 35], [57, "2026-09-21", "월", "2단계", 88.9, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [58, "2026-09-22", "화", "2단계", 88.8, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [59, "2026-09-23", "수", "2단계", 88.7, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [60, "2026-09-24", "목", "2단계", 88.6, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [61, "2026-09-25", "금", "2단계", 88.5, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [62, "2026-09-26", "토", "2단계", 88.4, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [63, "2026-09-27", "일", "2단계", 88.2, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [64, "2026-09-28", "월", "2단계", 88.1, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [65, "2026-09-29", "화", "2단계", 88.0, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [66, "2026-09-30", "수", "2단계", 87.9, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [67, "2026-10-01", "목", "2단계", 87.8, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [68, "2026-10-02", "금", "2단계", 87.7, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [69, "2026-10-03", "토", "2단계", 87.6, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [70, "2026-10-04", "일", "2단계", 87.5, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [71, "2026-10-05", "월", "2단계", 87.4, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [72, "2026-10-06", "화", "2단계", 87.3, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [73, "2026-10-07", "수", "2단계", 87.2, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [74, "2026-10-08", "목", "2단계", 87.1, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [75, "2026-10-09", "금", "2단계", 87.0, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [76, "2026-10-10", "토", "2단계", 86.9, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [77, "2026-10-11", "일", "2단계", 86.8, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [78, "2026-10-12", "월", "2단계", 86.6, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [79, "2026-10-13", "화", "2단계", 86.5, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [80, "2026-10-14", "수", "2단계", 86.4, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [81, "2026-10-15", "목", "2단계", 86.3, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [82, "2026-10-16", "금", "2단계", 86.2, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [83, "2026-10-17", "토", "2단계", 86.1, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [84, "2026-10-18", "일", "2단계", 86.0, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [85, "2026-10-19", "월", "2단계", 85.9, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [86, "2026-10-20", "화", "2단계", 85.8, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [87, "2026-10-21", "수", "2단계", 85.7, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [88, "2026-10-22", "목", "2단계", 85.6, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [89, "2026-10-23", "금", "2단계", 85.5, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [90, "2026-10-24", "토", "2단계", 85.4, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [91, "2026-10-25", "일", "2단계", 85.2, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [92, "2026-10-26", "월", "2단계", 85.1, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [93, "2026-10-27", "화", "2단계", 85.0, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [94, "2026-10-28", "수", "2단계", 84.9, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [95, "2026-10-29", "목", "2단계", 84.8, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [96, "2026-10-30", "금", "2단계", 84.7, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [97, "2026-10-31", "토", "2단계", 84.6, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [98, "2026-11-01", "일", "2단계", 84.5, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [99, "2026-11-02", "월", "2단계", 84.4, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [100, "2026-11-03", "화", "2단계", 84.3, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [101, "2026-11-04", "수", "2단계", 84.2, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [102, "2026-11-05", "목", "2단계", 84.1, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [103, "2026-11-06", "금", "2단계", 84.0, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [104, "2026-11-07", "토", "2단계", 83.9, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [105, "2026-11-08", "일", "2단계", 83.8, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [106, "2026-11-09", "월", "2단계", 83.6, 8500, "빠른 걷기 45분", "5~6", "근력 A", "3세트×10~15회", "10분", 75], [107, "2026-11-10", "화", "2단계", 83.5, 9000, "자전거/걷기 45분", "5", "코어·균형", "2~3세트", "10분", 60], [108, "2026-11-11", "수", "2단계", 83.4, 9500, "빠른 걷기 50분", "5~6", "근력 B", "3세트×10~15회", "10분", 80], [109, "2026-11-12", "목", "2단계", 83.3, 8000, "회복 걷기 35분", "4", "가동성", "2세트", "15분", 50], [110, "2026-11-13", "금", "2단계", 83.2, 10000, "걷기 인터벌 40분", "6", "근력 A", "3세트", "10분", 75], [111, "2026-11-14", "토", "2단계", 83.1, 10500, "등산/긴 걷기 75분", "5~6", "코어", "2세트", "15분", 90], [112, "2026-11-15", "일", "2단계", 83.0, 6500, "산책 30분", "3", "휴식", "-", "15분", 45], [113, "2026-11-16", "월", "3단계", 82.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [114, "2026-11-17", "화", "3단계", 82.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [115, "2026-11-18", "수", "3단계", 82.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [116, "2026-11-19", "목", "3단계", 82.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [117, "2026-11-20", "금", "3단계", 82.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [118, "2026-11-21", "토", "3단계", 82.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [119, "2026-11-22", "일", "3단계", 82.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [120, "2026-11-23", "월", "3단계", 82.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [121, "2026-11-24", "화", "3단계", 82.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [122, "2026-11-25", "수", "3단계", 82.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [123, "2026-11-26", "목", "3단계", 82.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [124, "2026-11-27", "금", "3단계", 82.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [125, "2026-11-28", "토", "3단계", 82.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [126, "2026-11-29", "일", "3단계", 82.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [127, "2026-11-30", "월", "3단계", 81.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [128, "2026-12-01", "화", "3단계", 81.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [129, "2026-12-02", "수", "3단계", 81.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [130, "2026-12-03", "목", "3단계", 81.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [131, "2026-12-04", "금", "3단계", 81.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [132, "2026-12-05", "토", "3단계", 81.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [133, "2026-12-06", "일", "3단계", 81.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [134, "2026-12-07", "월", "3단계", 81.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [135, "2026-12-08", "화", "3단계", 81.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [136, "2026-12-09", "수", "3단계", 81.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [137, "2026-12-10", "목", "3단계", 81.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [138, "2026-12-11", "금", "3단계", 81.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [139, "2026-12-12", "토", "3단계", 81.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [140, "2026-12-13", "일", "3단계", 81.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [141, "2026-12-14", "월", "3단계", 80.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [142, "2026-12-15", "화", "3단계", 80.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [143, "2026-12-16", "수", "3단계", 80.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [144, "2026-12-17", "목", "3단계", 80.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [145, "2026-12-18", "금", "3단계", 80.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [146, "2026-12-19", "토", "3단계", 80.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [147, "2026-12-20", "일", "3단계", 80.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [148, "2026-12-21", "월", "3단계", 80.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [149, "2026-12-22", "화", "3단계", 80.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [150, "2026-12-23", "수", "3단계", 80.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [151, "2026-12-24", "목", "3단계", 80.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [152, "2026-12-25", "금", "3단계", 80.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [153, "2026-12-26", "토", "3단계", 80.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [154, "2026-12-27", "일", "3단계", 80.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [155, "2026-12-28", "월", "3단계", 79.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [156, "2026-12-29", "화", "3단계", 79.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [157, "2026-12-30", "수", "3단계", 79.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [158, "2026-12-31", "목", "3단계", 79.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [159, "2027-01-01", "금", "3단계", 79.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [160, "2027-01-02", "토", "3단계", 79.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [161, "2027-01-03", "일", "3단계", 79.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [162, "2027-01-04", "월", "3단계", 79.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [163, "2027-01-05", "화", "3단계", 79.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [164, "2027-01-06", "수", "3단계", 79.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [165, "2027-01-07", "목", "3단계", 79.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [166, "2027-01-08", "금", "3단계", 79.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [167, "2027-01-09", "토", "3단계", 79.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [168, "2027-01-10", "일", "3단계", 79.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [169, "2027-01-11", "월", "3단계", 78.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [170, "2027-01-12", "화", "3단계", 78.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [171, "2027-01-13", "수", "3단계", 78.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [172, "2027-01-14", "목", "3단계", 78.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [173, "2027-01-15", "금", "3단계", 78.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [174, "2027-01-16", "토", "3단계", 78.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [175, "2027-01-17", "일", "3단계", 78.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [176, "2027-01-18", "월", "3단계", 78.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [177, "2027-01-19", "화", "3단계", 78.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [178, "2027-01-20", "수", "3단계", 78.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [179, "2027-01-21", "목", "3단계", 78.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [180, "2027-01-22", "금", "3단계", 78.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [181, "2027-01-23", "토", "3단계", 78.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [182, "2027-01-24", "일", "3단계", 78.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [183, "2027-01-25", "월", "3단계", 77.9, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [184, "2027-01-26", "화", "3단계", 77.9, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [185, "2027-01-27", "수", "3단계", 77.8, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [186, "2027-01-28", "목", "3단계", 77.7, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [187, "2027-01-29", "금", "3단계", 77.6, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [188, "2027-01-30", "토", "3단계", 77.6, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [189, "2027-01-31", "일", "3단계", 77.5, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [190, "2027-02-01", "월", "3단계", 77.4, 9500, "빠른 걷기/조깅 50분", "6", "근력 A(저항↑)", "3세트×8~12회", "10분", 80], [191, "2027-02-02", "화", "3단계", 77.4, 10000, "자전거 50분", "5~6", "코어·균형", "3세트", "10분", 70], [192, "2027-02-03", "수", "3단계", 77.3, 10500, "인터벌 45분", "6~7", "근력 B(저항↑)", "3세트×8~12회", "10분", 80], [193, "2027-02-04", "목", "3단계", 77.2, 8500, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [194, "2027-02-05", "금", "3단계", 77.1, 11000, "경사 걷기 50분", "6", "근력 A", "3세트", "10분", 85], [195, "2027-02-06", "토", "3단계", 77.1, 11500, "등산/장거리 90분", "6", "코어", "2세트", "15분", 105], [196, "2027-02-07", "일", "3단계", 77.0, 7000, "산책 30분", "3", "휴식", "-", "15분", 45], [197, "2027-02-08", "월", "4단계", 76.9, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [198, "2027-02-09", "화", "4단계", 76.9, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [199, "2027-02-10", "수", "4단계", 76.8, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [200, "2027-02-11", "목", "4단계", 76.8, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [201, "2027-02-12", "금", "4단계", 76.7, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [202, "2027-02-13", "토", "4단계", 76.7, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [203, "2027-02-14", "일", "4단계", 76.6, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [204, "2027-02-15", "월", "4단계", 76.6, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [205, "2027-02-16", "화", "4단계", 76.5, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [206, "2027-02-17", "수", "4단계", 76.5, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [207, "2027-02-18", "목", "4단계", 76.4, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [208, "2027-02-19", "금", "4단계", 76.4, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [209, "2027-02-20", "토", "4단계", 76.3, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [210, "2027-02-21", "일", "4단계", 76.2, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [211, "2027-02-22", "월", "4단계", 76.2, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [212, "2027-02-23", "화", "4단계", 76.1, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [213, "2027-02-24", "수", "4단계", 76.1, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [214, "2027-02-25", "목", "4단계", 76.0, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [215, "2027-02-26", "금", "4단계", 76.0, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [216, "2027-02-27", "토", "4단계", 75.9, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [217, "2027-02-28", "일", "4단계", 75.9, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [218, "2027-03-01", "월", "4단계", 75.8, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [219, "2027-03-02", "화", "4단계", 75.8, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [220, "2027-03-03", "수", "4단계", 75.7, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [221, "2027-03-04", "목", "4단계", 75.7, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [222, "2027-03-05", "금", "4단계", 75.6, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [223, "2027-03-06", "토", "4단계", 75.6, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [224, "2027-03-07", "일", "4단계", 75.5, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [225, "2027-03-08", "월", "4단계", 75.4, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [226, "2027-03-09", "화", "4단계", 75.4, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [227, "2027-03-10", "수", "4단계", 75.3, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [228, "2027-03-11", "목", "4단계", 75.3, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [229, "2027-03-12", "금", "4단계", 75.2, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [230, "2027-03-13", "토", "4단계", 75.2, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [231, "2027-03-14", "일", "4단계", 75.1, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [232, "2027-03-15", "월", "4단계", 75.1, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [233, "2027-03-16", "화", "4단계", 75.0, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [234, "2027-03-17", "수", "4단계", 75.0, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [235, "2027-03-18", "목", "4단계", 74.9, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [236, "2027-03-19", "금", "4단계", 74.9, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [237, "2027-03-20", "토", "4단계", 74.8, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [238, "2027-03-21", "일", "4단계", 74.8, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [239, "2027-03-22", "월", "4단계", 74.7, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [240, "2027-03-23", "화", "4단계", 74.6, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [241, "2027-03-24", "수", "4단계", 74.6, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [242, "2027-03-25", "목", "4단계", 74.5, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [243, "2027-03-26", "금", "4단계", 74.5, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [244, "2027-03-27", "토", "4단계", 74.4, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [245, "2027-03-28", "일", "4단계", 74.4, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [246, "2027-03-29", "월", "4단계", 74.3, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [247, "2027-03-30", "화", "4단계", 74.3, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [248, "2027-03-31", "수", "4단계", 74.2, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [249, "2027-04-01", "목", "4단계", 74.2, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [250, "2027-04-02", "금", "4단계", 74.1, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [251, "2027-04-03", "토", "4단계", 74.1, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [252, "2027-04-04", "일", "4단계", 74.0, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [253, "2027-04-05", "월", "4단계", 73.9, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [254, "2027-04-06", "화", "4단계", 73.9, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [255, "2027-04-07", "수", "4단계", 73.8, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [256, "2027-04-08", "목", "4단계", 73.8, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [257, "2027-04-09", "금", "4단계", 73.7, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [258, "2027-04-10", "토", "4단계", 73.7, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [259, "2027-04-11", "일", "4단계", 73.6, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [260, "2027-04-12", "월", "4단계", 73.6, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [261, "2027-04-13", "화", "4단계", 73.5, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [262, "2027-04-14", "수", "4단계", 73.5, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [263, "2027-04-15", "목", "4단계", 73.4, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [264, "2027-04-16", "금", "4단계", 73.4, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [265, "2027-04-17", "토", "4단계", 73.3, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [266, "2027-04-18", "일", "4단계", 73.2, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [267, "2027-04-19", "월", "4단계", 73.2, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [268, "2027-04-20", "화", "4단계", 73.1, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [269, "2027-04-21", "수", "4단계", 73.1, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [270, "2027-04-22", "목", "4단계", 73.0, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [271, "2027-04-23", "금", "4단계", 73.0, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [272, "2027-04-24", "토", "4단계", 72.9, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [273, "2027-04-25", "일", "4단계", 72.9, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [274, "2027-04-26", "월", "4단계", 72.8, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [275, "2027-04-27", "화", "4단계", 72.8, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [276, "2027-04-28", "수", "4단계", 72.7, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [277, "2027-04-29", "목", "4단계", 72.7, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [278, "2027-04-30", "금", "4단계", 72.6, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [279, "2027-05-01", "토", "4단계", 72.6, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [280, "2027-05-02", "일", "4단계", 72.5, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [281, "2027-05-03", "월", "4단계", 72.4, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [282, "2027-05-04", "화", "4단계", 72.4, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [283, "2027-05-05", "수", "4단계", 72.3, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [284, "2027-05-06", "목", "4단계", 72.3, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [285, "2027-05-07", "금", "4단계", 72.2, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [286, "2027-05-08", "토", "4단계", 72.2, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [287, "2027-05-09", "일", "4단계", 72.1, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [288, "2027-05-10", "월", "4단계", 72.1, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [289, "2027-05-11", "화", "4단계", 72.0, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [290, "2027-05-12", "수", "4단계", 72.0, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [291, "2027-05-13", "목", "4단계", 71.9, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [292, "2027-05-14", "금", "4단계", 71.9, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [293, "2027-05-15", "토", "4단계", 71.8, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [294, "2027-05-16", "일", "4단계", 71.8, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [295, "2027-05-17", "월", "4단계", 71.7, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [296, "2027-05-18", "화", "4단계", 71.6, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [297, "2027-05-19", "수", "4단계", 71.6, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [298, "2027-05-20", "목", "4단계", 71.5, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [299, "2027-05-21", "금", "4단계", 71.5, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [300, "2027-05-22", "토", "4단계", 71.4, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [301, "2027-05-23", "일", "4단계", 71.4, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [302, "2027-05-24", "월", "4단계", 71.3, 10500, "경사 걷기 50분", "6~7", "근력 A(중량)", "3~4세트×8~12회", "10분", 85], [303, "2027-05-25", "화", "4단계", 71.3, 10500, "자전거/수영 50분", "5~6", "코어·균형", "3세트", "10분", 70], [304, "2027-05-26", "수", "4단계", 71.2, 11000, "인터벌 45분", "7", "근력 B(중량)", "3~4세트×8~12회", "10분", 85], [305, "2027-05-27", "목", "4단계", 71.2, 9000, "회복 걷기 40분", "4", "가동성·폼롤링", "2세트", "15분", 55], [306, "2027-05-28", "금", "4단계", 71.1, 11500, "빠른 걷기 55분", "6", "전신 복합운동", "3세트", "10분", 85], [307, "2027-05-29", "토", "4단계", 71.1, 12000, "등산/장거리 90분", "6", "코어", "2~3세트", "15분", 110], [308, "2027-05-30", "일", "4단계", 71.0, 7500, "산책 30분", "3", "휴식", "-", "20분", 50], [309, "2027-05-31", "월", "5단계", 71.0, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [310, "2027-06-01", "화", "5단계", 71.0, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [311, "2027-06-02", "수", "5단계", 70.9, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [312, "2027-06-03", "목", "5단계", 70.9, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [313, "2027-06-04", "금", "5단계", 70.9, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [314, "2027-06-05", "토", "5단계", 70.9, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [315, "2027-06-06", "일", "5단계", 70.9, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [316, "2027-06-07", "월", "5단계", 70.9, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [317, "2027-06-08", "화", "5단계", 70.8, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [318, "2027-06-09", "수", "5단계", 70.8, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [319, "2027-06-10", "목", "5단계", 70.8, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [320, "2027-06-11", "금", "5단계", 70.8, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [321, "2027-06-12", "토", "5단계", 70.8, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [322, "2027-06-13", "일", "5단계", 70.8, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [323, "2027-06-14", "월", "5단계", 70.7, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [324, "2027-06-15", "화", "5단계", 70.7, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [325, "2027-06-16", "수", "5단계", 70.7, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [326, "2027-06-17", "목", "5단계", 70.7, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [327, "2027-06-18", "금", "5단계", 70.7, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [328, "2027-06-19", "토", "5단계", 70.6, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [329, "2027-06-20", "일", "5단계", 70.6, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [330, "2027-06-21", "월", "5단계", 70.6, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [331, "2027-06-22", "화", "5단계", 70.6, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [332, "2027-06-23", "수", "5단계", 70.6, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [333, "2027-06-24", "목", "5단계", 70.6, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [334, "2027-06-25", "금", "5단계", 70.5, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [335, "2027-06-26", "토", "5단계", 70.5, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [336, "2027-06-27", "일", "5단계", 70.5, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [337, "2027-06-28", "월", "5단계", 70.5, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [338, "2027-06-29", "화", "5단계", 70.5, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [339, "2027-06-30", "수", "5단계", 70.5, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [340, "2027-07-01", "목", "5단계", 70.4, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [341, "2027-07-02", "금", "5단계", 70.4, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [342, "2027-07-03", "토", "5단계", 70.4, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [343, "2027-07-04", "일", "5단계", 70.4, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [344, "2027-07-05", "월", "5단계", 70.4, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [345, "2027-07-06", "화", "5단계", 70.4, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [346, "2027-07-07", "수", "5단계", 70.3, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [347, "2027-07-08", "목", "5단계", 70.3, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [348, "2027-07-09", "금", "5단계", 70.3, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [349, "2027-07-10", "토", "5단계", 70.3, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [350, "2027-07-11", "일", "5단계", 70.3, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [351, "2027-07-12", "월", "5단계", 70.2, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [352, "2027-07-13", "화", "5단계", 70.2, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [353, "2027-07-14", "수", "5단계", 70.2, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [354, "2027-07-15", "목", "5단계", 70.2, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [355, "2027-07-16", "금", "5단계", 70.2, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [356, "2027-07-17", "토", "5단계", 70.2, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [357, "2027-07-18", "일", "5단계", 70.1, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [358, "2027-07-19", "월", "5단계", 70.1, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75], [359, "2027-07-20", "화", "5단계", 70.1, 9500, "취미 유산소 45분", "5", "균형·민첩성", "3세트", "10분", 65], [360, "2027-07-21", "수", "5단계", 70.1, 10000, "인터벌 35분", "6~7", "근력 B(근력중심)", "3세트×6~10회", "10분", 70], [361, "2027-07-22", "목", "5단계", 70.1, 8500, "회복 걷기 35분", "4", "가동성·폼롤링", "2세트", "15분", 50], [362, "2027-07-23", "금", "5단계", 70.1, 10000, "유산소 45분", "5~6", "전신 복합운동", "3세트×8~12회", "10분", 75], [363, "2027-07-24", "토", "5단계", 70.0, 11000, "등산/수영/자전거 60~90분", "5~6", "선택 코어", "2세트", "15분", 90], [364, "2027-07-25", "일", "5단계", 70.0, 7500, "산책 30분", "3", "휴식", "-", "15분", 45], [365, "2027-07-26", "월", "5단계", 70.0, 9500, "빠른 걷기 45분", "5~6", "근력 A(근력중심)", "3세트×6~10회", "10분", 75]];
+
+const START = "2026-07-27";
+const STAGES = [
+ ["1단계","95~89kg","180~240분","주 2회 · 1~2세트×10~12회"],
+ ["2단계","89~83kg","240~300분","주 3회 · 2~3세트×10~15회"],
+ ["3단계","83~77kg","270~330분","주 3회 · 3세트×8~12회"],
+ ["4단계","77~71kg","240~300분","주 3회 · 3~4세트×8~12회"],
+ ["5단계","68~71kg","180~240분","주 3회 · 3세트×6~12회"]
+];
+const STR_A = {
+ "1단계":[["스쿼트/의자스쿼트","10회"],["푸시업","벽푸시업 8회"],["힙브릿지","12회"],["카프레이즈","15회"],["플랭크","15~20초"]],
+ "2단계":[["스쿼트","12~15회"],["푸시업","10~12회"],["힙브릿지","15회"],["카프레이즈","20회"],["플랭크","25~30초"]],
+ "3단계":[["스쿼트","덤벨 8~12회"],["푸시업","8~12회"],["힙브릿지","중량 10회"],["카프레이즈","25회"],["플랭크","35~45초"]],
+ "4단계":[["스쿼트","중량 8~12회"],["푸시업","8~15회"],["힙브릿지","중량 10~12회"],["카프레이즈","중량 15~20회"],["플랭크","45~60초"]],
+ "5단계":[["스쿼트","중량 6~10회"],["푸시업","8~15회"],["힙브릿지","중량 8~12회"],["카프레이즈","15~25회"],["플랭크","45~75초"]]
+};
+const STR_B = {
+ "1단계":[["밴드/덤벨 로우","10회"],["힙힌지/RDL","맨몸 10회"],["버드독","좌우 8회"],["데드버그","좌우 8회"],["사이드 플랭크","10초"]],
+ "2단계":[["로우","12~15회"],["힙힌지/RDL","덤벨 10~12회"],["버드독","좌우 10회"],["데드버그","좌우 10회"],["사이드 플랭크","15~20초"]],
+ "3단계":[["로우","중량 8~12회"],["힙힌지/RDL","중량 8~12회"],["버드독","좌우 12회"],["데드버그","좌우 12회"],["사이드 플랭크","25~35초"]],
+ "4단계":[["로우","중량 8~12회"],["힙힌지/RDL","중량 8~10회"],["버드독","좌우 12~15회"],["데드버그","좌우 12~15회"],["사이드 플랭크","35~45초"]],
+ "5단계":[["로우","중량 6~10회"],["힙힌지/RDL","중량 6~10회"],["버드독","좌우 12회"],["데드버그","좌우 12회"],["사이드 플랭크","40~60초"]]
+};
+
+let logs = {};            // {dayNum: {...}}
+let curIdx = 0;           // 0-based index into PLAN
+const SKEY = 'wt365-logs';
+
+function todayIdx(){
+  const t = new Date(); t.setHours(0,0,0,0);
+  const s = new Date(START+"T00:00:00");
+  let d = Math.round((t-s)/86400000);
+  return Math.min(Math.max(d,0), PLAN.length-1);
+}
+function fmtDate(iso){
+  const [y,m,d] = iso.split('-');
+  return `${y}년 ${+m}월 ${+d}일`;
+}
+
+// ---------- storage ----------
+// Claude 안에서는 window.storage(계정 저장), 외부 사이트에서는 기기 저장(localStorage) 사용
+const hasCloud = typeof window.storage !== 'undefined' && window.storage;
+async function loadLogs(){
+  if(hasCloud){
+    try{
+      const r = await window.storage.get(SKEY);
+      if(r && r.value) logs = JSON.parse(r.value);
+      return;
+    }catch(e){ logs = {}; }
+  }
+  try{
+    const v = localStorage.getItem(SKEY);
+    if(v) logs = JSON.parse(v);
+  }catch(e){ logs = {}; }
+}
+async function persist(){
+  if(hasCloud){
+    try{ await window.storage.set(SKEY, JSON.stringify(logs)); return true; }
+    catch(e){ /* 계속 진행하여 기기 저장 시도 */ }
+  }
+  try{ localStorage.setItem(SKEY, JSON.stringify(logs)); return true; }
+  catch(e){ return false; }
+}
+
+// ---------- 오늘 뷰 ----------
+function renderDay(){
+  const p = PLAN[curIdx];
+  const [day,date,dow,stage,pw,steps,cardio,rpe,str,sets,stretch,tmin] = p;
+  const log = logs[day] || {};
+  const ti = todayIdx();
+
+  document.getElementById('dnDate').textContent = `${fmtDate(date)} (${dow})`;
+  document.getElementById('dnSub').textContent = `${day}일차 · 계획 체중 ${pw.toFixed(1)}kg`;
+  document.getElementById('goToday').style.display = curIdx===ti ? 'none':'block';
+  document.getElementById('prevDay').disabled = curIdx===0;
+  document.getElementById('nextDay').disabled = curIdx===PLAN.length-1;
+  document.getElementById('stageChip').textContent = stage;
+  document.getElementById('hDay').textContent = `${ti+1}일차 / 365`;
+
+  // 배너: 자동 조정 규칙
+  const bn = [];
+  const lastW = latestWeight();
+  if(lastW !== null && lastW <= 71) bn.push(['green','최근 체중 '+lastW+'kg — 목표 범위 도달! 유지형(5단계) 전환을 검토하세요.']);
+  if(lastW !== null && lastW < 68) bn.push(['amber','68kg 미만 — 고강도 축소, 섭취 소폭 증가로 추가 감량을 방지하세요.']);
+  if(log.pain >= 7) bn.push(['red','통증·피로 '+log.pain+' — 오늘 운동량을 30~50% 줄이고 48시간 회복하세요. 통증이 계속되면 진료를 받으세요.']);
+  document.getElementById('banners').innerHTML = bn.map(b=>`<div class="banner ${b[0]}">${b[1]}</div>`).join('');
+
+  // 계획 체크리스트
+  const done = log.checks || {};
+  const items = [
+    ['walk','👟','걸음 목표', steps.toLocaleString()+' 걸음'],
+    ['cardio','🏃','유산소', `${cardio} (RPE ${rpe})`],
+    ['str','💪','근력', str==='휴식'||str==='-' ? str : `${str} · ${sets}`],
+    ['stretch','🧘','스트레칭', stretch]
+  ];
+  document.getElementById('planList').innerHTML = items.map(([k,ico,n,v])=>`
+    <li><div class="chk ${done[k]?'on':''}" data-k="${k}" role="checkbox" aria-checked="${!!done[k]}" tabindex="0">${done[k]?'✓':''}</div>
+    <span class="pl-ico">${ico}</span>
+    <div><div class="pl-name">${n}</div><div class="pl-val">${v}</div></div></li>`).join('');
+  document.querySelectorAll('.chk').forEach(el=>{
+    const toggle = async ()=>{
+      const k = el.dataset.k;
+      const lg = logs[day] = logs[day] || {};
+      lg.checks = lg.checks || {};
+      lg.checks[k] = !lg.checks[k];
+      lg.done = ['walk','cardio','str','stretch'].every(x=>lg.checks[x]);
+      await persist(); renderDay(); renderStrip();
+    };
+    el.addEventListener('click',toggle);
+    el.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle();}});
+  });
+
+  // 입력값
+  setV('inW',log.w); setV('inMin',log.min); setV('inSteps',log.steps);
+  setV('inSleep',log.sleep); setV('inWater',log.water); setV('inBP',log.bp);
+  setV('inDietB', log.dietB ?? log.diet); // 예전 단일 식단 메모는 아침 칸에 표시
+  setV('inDietL', log.dietL); setV('inDietD', log.dietD);
+  setV('inMed', log.med); setV('inMemo', log.memo);
+  document.getElementById('inPain').value = log.pain ?? 0;
+  document.getElementById('painVal').textContent = log.pain ?? 0;
+  document.getElementById('savedMsg').textContent='';
+}
+function setV(id,v){ document.getElementById(id).value = v ?? ''; }
+function num(id){ const v = document.getElementById(id).value.trim(); return v===''?null:+v; }
+
+function latestWeight(){
+  const days = Object.keys(logs).map(Number).sort((a,b)=>b-a);
+  for(const d of days){ if(logs[d].w!=null) return logs[d].w; }
+  return null;
+}
+
+document.getElementById('saveBtn').addEventListener('click', async ()=>{
+  const day = PLAN[curIdx][0];
+  const lg = logs[day] = logs[day] || {};
+  lg.w = num('inW'); lg.min = num('inMin'); lg.steps = num('inSteps');
+  lg.sleep = num('inSleep'); lg.water = num('inWater');
+  lg.bp = document.getElementById('inBP').value.trim() || null;
+  lg.dietB = document.getElementById('inDietB').value.trim() || null;
+  lg.dietL = document.getElementById('inDietL').value.trim() || null;
+  lg.dietD = document.getElementById('inDietD').value.trim() || null;
+  lg.med = document.getElementById('inMed').value.trim() || null;
+  delete lg.diet; // 구버전 단일 식단 필드는 새 필드로 대체
+  lg.memo = document.getElementById('inMemo').value.trim() || null;
+  lg.pain = +document.getElementById('inPain').value;
+  const ok = await persist();
+  document.getElementById('savedMsg').textContent = ok ? '저장되었습니다 ✓' : '저장 실패 — 잠시 후 다시 시도하세요';
+  renderDay(); renderStrip();
+});
+document.getElementById('inPain').addEventListener('input',e=>{
+  document.getElementById('painVal').textContent = e.target.value;
+});
+document.getElementById('prevDay').addEventListener('click',()=>{ if(curIdx>0){curIdx--; renderDay();} });
+document.getElementById('nextDay').addEventListener('click',()=>{ if(curIdx<PLAN.length-1){curIdx++; renderDay();} });
+document.getElementById('goToday').addEventListener('click',()=>{ curIdx=todayIdx(); renderDay(); });
+
+// ---------- 헤더 스트립 ----------
+function renderStrip(){
+  const el = document.getElementById('strip');
+  const ti = todayIdx();
+  // 365칸은 너무 좁으므로 5일 단위 73칸
+  let html='';
+  for(let b=0;b<73;b++){
+    const s=b*5, e=Math.min(s+5,365);
+    let doneCnt=0, isToday=false;
+    for(let i=s;i<e;i++){
+      const d=PLAN[i][0];
+      if(logs[d] && logs[d].done) doneCnt++;
+      if(i===ti) isToday=true;
+    }
+    const cls = isToday?'today':(doneCnt>=3?'done':'');
+    html+=`<span class="${cls}"></span>`;
+  }
+  el.innerHTML=html;
+}
+
+// ---------- 기록 뷰 ----------
+function renderRecords(){
+  const days = Object.keys(logs).map(Number).sort((a,b)=>b-a);
+  const doneCnt = days.filter(d=>logs[d].done).length;
+  // 연속: 오늘부터 뒤로
+  let streak=0; const ti=todayIdx();
+  for(let i=ti;i>=0;i--){
+    const d=PLAN[i][0];
+    if(logs[d] && (logs[d].done || logs[d].w!=null || logs[d].min!=null)) streak++;
+    else break;
+  }
+  const passed = ti+1;
+  document.getElementById('stDone').textContent = doneCnt;
+  document.getElementById('stStreak').textContent = streak;
+  document.getElementById('stRate').textContent = Math.round(doneCnt/passed*100)+'%';
+
+  const el = document.getElementById('recList');
+  if(!days.length){ el.innerHTML='<p class="small">아직 기록이 없습니다. 오늘 화면에서 첫 기록을 저장해 보세요.</p>'; return; }
+  el.innerHTML = days.map(d=>{
+    const p = PLAN[d-1]; const lg = logs[d];
+    const parts=[];
+    if(lg.min!=null) parts.push(lg.min+'분');
+    if(lg.steps!=null) parts.push(lg.steps.toLocaleString()+'걸음');
+    if(lg.med) parts.push('💊');
+    return `<div class="rec-item" data-d="${d}">
+      <div class="rec-l"><div class="d">${d}일차 · ${p[1].slice(5)} (${p[2]})${lg.done?'<span class="rec-done">완료</span>':''}</div>
+      <div class="s">${p[3]} · 계획 ${p[4].toFixed(1)}kg</div></div>
+      <div class="rec-r"><div class="w">${lg.w!=null? lg.w+'kg':'—'}</div><div class="m">${parts.join(' · ')||''}</div></div>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.rec-item').forEach(it=>it.addEventListener('click',()=>{
+    curIdx = +it.dataset.d - 1;
+    switchView('today'); renderDay();
+  }));
+}
+
+// ---------- 진행 뷰 ----------
+function renderProgress(){
+  const W=340,H=200,P={l:34,r:8,t:10,b:22};
+  const ti = todayIdx();
+  const upto = Math.min(ti+14, PLAN.length-1); // 오늘+2주 앞까지 계획선
+  const planPts = PLAN.slice(0,upto+1).map((p,i)=>[i,p[4]]);
+  const actPts=[];
+  for(let i=0;i<=ti;i++){ const d=PLAN[i][0]; if(logs[d]&&logs[d].w!=null) actPts.push([i,logs[d].w]); }
+  const ys = planPts.map(p=>p[1]).concat(actPts.map(p=>p[1]));
+  const ymin = Math.floor(Math.min(...ys)-1), ymax=Math.ceil(Math.max(...ys)+1);
+  const X=i=>P.l+(W-P.l-P.r)*i/Math.max(upto,1);
+  const Y=v=>P.t+(H-P.t-P.b)*(ymax-v)/(ymax-ymin);
+  const path=pts=>pts.map((p,j)=>(j?'L':'M')+X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1)).join(' ');
+  let grid='';
+  for(let v=ymin;v<=ymax;v+=Math.max(1,Math.round((ymax-ymin)/5))){
+    grid+=`<line x1="${P.l}" y1="${Y(v)}" x2="${W-P.r}" y2="${Y(v)}" stroke="#E3E8E3"/>
+    <text x="${P.l-5}" y="${Y(v)+4}" font-size="10" fill="#5C6A66" text-anchor="end">${v}</text>`;
+  }
+  const dots = actPts.map(p=>`<circle cx="${X(p[0]).toFixed(1)}" cy="${Y(p[1]).toFixed(1)}" r="3.5" fill="#1E4D3B"/>`).join('');
+  document.getElementById('chartWrap').innerHTML =
+   `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="체중 추이 그래프">
+     ${grid}
+     <path d="${path(planPts)}" fill="none" stroke="#B9C4BC" stroke-width="2" stroke-dasharray="4 3"/>
+     ${actPts.length>1?`<path d="${path(actPts)}" fill="none" stroke="#1E4D3B" stroke-width="2.5"/>`:''}
+     ${dots}
+     <line x1="${X(ti)}" y1="${P.t}" x2="${X(ti)}" y2="${H-P.b}" stroke="#E8A33D" stroke-width="1.5"/>
+     <text x="${X(ti)}" y="${H-6}" font-size="10" fill="#7A5313" text-anchor="middle">오늘</text>
+   </svg>`;
+  document.getElementById('chartNote').textContent = actPts.length
+    ? `실제 체중 기록 ${actPts.length}회 · 최근 ${actPts[actPts.length-1][1]}kg`
+    : '체중을 기록하면 초록 실선으로 표시됩니다.';
+
+  // 주간 운동 시간 바
+  const wStart = ti - ((ti % 7));
+  let bars='', total=0;
+  for(let i=0;i<7;i++){
+    const idx = wStart+i; if(idx>=PLAN.length) break;
+    const p=PLAN[idx]; const lg=logs[p[0]]||{};
+    const t=p[11], a=lg.min||0; total+=a;
+    const bw=36, x=10+i*46, maxm=100;
+    const th=Math.min(t,maxm)/maxm*110, ah=Math.min(a,maxm)/maxm*110;
+    bars+=`<rect x="${x}" y="${130-th}" width="${bw}" height="${th}" fill="#DCE9E0" rx="4"/>
+     <rect x="${x}" y="${130-ah}" width="${bw}" height="${ah}" fill="#1E4D3B" rx="4"/>
+     <text x="${x+bw/2}" y="146" font-size="10" fill="#5C6A66" text-anchor="middle">${p[2]}</text>`;
+  }
+  document.getElementById('weekWrap').innerHTML =
+   `<svg class="chart" viewBox="0 0 340 155" role="img" aria-label="이번 주 운동 시간">${bars}</svg>
+    <p class="small mt8">연한 색 = 목표, 진한 색 = 실제 · 이번 주 합계 ${total}분</p>`;
+}
+
+// ---------- 단계 뷰 ----------
+function renderStages(){
+  const curStage = PLAN[todayIdx()][3];
+  const t = document.getElementById('stageTable');
+  t.innerHTML = '<tr><th>단계</th><th>체중 구간</th><th>주간 유산소</th><th>근력</th></tr>' +
+    STAGES.map(s=>`<tr class="${s[0]===curStage?'cur':''}"><td><b>${s[0]}</b></td><td>${s[1]}</td><td>${s[2]}</td><td>${s[3]}</td></tr>`).join('');
+  const mk = arr => '<table class="stage-t">'+arr.map(x=>`<tr><td>${x[0]}</td><td><b>${x[1]}</b></td></tr>`).join('')+'</table>';
+  document.getElementById('strA').innerHTML = mk(STR_A[curStage]);
+  document.getElementById('strB').innerHTML = mk(STR_B[curStage]);
+}
+
+// ---------- 네비 ----------
+function switchView(v){
+  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
+  document.getElementById('view-'+v).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  if(v==='records') renderRecords();
+  if(v==='progress') renderProgress();
+  if(v==='stages') renderStages();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>switchView(b.dataset.v)));
+
+// ---------- 시작 ----------
+(async function(){
+  await loadLogs();
+  curIdx = todayIdx();
+  renderDay(); renderStrip();
+})();
+</script>
+</body>
+</html>
